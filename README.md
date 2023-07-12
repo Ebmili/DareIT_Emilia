@@ -14,6 +14,7 @@ Clone the repo and run test in the chosen ide.
 
 ## 🧩 Aboout project
 
+selectors
 In this project I will challenge myself to create automation tests for the websites.
 
 Subtask 1 - finding Selectors
@@ -33,3 +34,6 @@ Relative Selectors:
 
 Absolute Selector for the lagugage dropDown:
 /html[1]/body[1]/div[1]/form[1]/div[1]/div[2]/div[1]/div[1]
+=======
+In this project I will challenge myself to create automation tests for the websites. 
+main
