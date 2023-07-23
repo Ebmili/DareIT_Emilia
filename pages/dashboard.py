@@ -1,3 +1,4 @@
+First_automatic_test,_asserts
 import time
 
 from selenium.webdriver.common.by import By
@@ -50,3 +51,8 @@ class Dashboard(BasePage):
 
 
     pass
+from pages.base_page import BasePage
+
+class Dashboard(BasePage):
+  pass
+main

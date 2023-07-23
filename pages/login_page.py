@@ -1,10 +1,13 @@
+First_automatic_test,_asserts
 import time
 
+main
 from pages.base_page import BasePage
 
 
 class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
+ First_automatic_test,_asserts
     password_field_xpath = "//*[@id='password']"
     sign_in_button_xpath = "//button[starts-with(@class,'MuiButtonBase-root')]"
     remind_password_xpath = "//a[starts-with(@class,'MuiTypography-root')]"
@@ -32,3 +35,10 @@ class LoginPage(BasePage):
 
     def check_page_title(self):
         self.assert_element_text(self.driver, self.title_of_box_xpath, self.header_of_box)
+
+    password_field_xpath = 
+    sign_in_button_xpath = 
+
+    def type_in_email(self, email):
+        self.field_send_keys(self.login_field_xpath, email)
+ main
