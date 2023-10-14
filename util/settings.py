@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 SYSTEM = sys.platform
 PATH_TO_PROJECT = os.path.dirname(os.path.abspath(__file__))
 
-if SYSTEM == 'win32':
+if SYSTEM == 'win64':
     CHROME_DRIVER = "chromedriver.exe"
 else:
     CHROME_DRIVER = "chromedriver"
