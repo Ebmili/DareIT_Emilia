@@ -1,15 +1,16 @@
-
 import os
 import unittest
+
 from selenium import webdriver
-from utils.settings import DRIVER_PATH, IMPLICITLY_WAIT
-from selenium.webdriver.chrome.service import Service
+from webdriver_manager.chrome import ChromeDriverManager
+
+from selenium.webdriver.chrome.service import Service as ChromeService
+
+IMPLICITLY_WAIT = 10
 
 class TestMediumPage(unittest.TestCase):
     def setUp(self):
-        os.chmod(DRIVER_PATH, 755)
-        self.driver_service = Service(executable_path=DRIVER_PATH)
-        self.driver = webdriver.Chrome(service=self.driver_service)
+        self.driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
         self.driver.get('https://medium.com/')
         self.driver.fullscreen_window()
         self.driver.implicitly_wait(IMPLICITLY_WAIT)
