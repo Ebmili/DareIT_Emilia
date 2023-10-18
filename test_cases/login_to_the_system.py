@@ -5,7 +5,6 @@ from pages.login_page import LoginPage
 from selenium import webdriver
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
-
 class TestLoginPage(unittest.TestCase):
 
     @classmethod
@@ -20,7 +19,6 @@ class TestLoginPage(unittest.TestCase):
         user_login.type_in_email('user04@getnada.com')
         user_login.type_in_password('Test-1234')
         user_login.click_sign_in_button()
-
 
     @classmethod
     def tearDownClass(cls):
