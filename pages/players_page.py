@@ -16,7 +16,7 @@ class PlayersPage(BasePage):
     filter_table_rate_min_field_xpath = '//label [text()="Rate"]/parent::div/div/div[1]//input'
     filter_table_rate_max_field_xpath = '//label [text()="Rate"]/parent::div/div/div[2]//input'
     filter_table_close_button_xpath = '//*[@aria-label ="Close"]'
-    result_table_xpath = '//tbody'
+    result_table_xpath = '//body'
     name_column_xpath = '//*[@id="MUIDataTableBodyRow-0"]/td[1]'
     surname_column_xpath = '//*[@id="MUIDataTableBodyRow-0"]/td[2]'
     main_position_column_xpath = '//*[@id="MUIDataTableBodyRow-0"]/td[4]'

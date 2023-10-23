@@ -1,8 +1,5 @@
 from lib2to3.pgen2 import driver
-
-import self
 from selenium.webdriver.support.wait import WebDriverWait
-
 from pages.base_page import BasePage
 
 
@@ -27,13 +24,12 @@ class AddAPlayer(BasePage):
     wait = WebDriverWait(driver, 10)
     required_message_xpath = "//p[contains(@class, 'required')]"
 
-
     def check_title_of_page(self):
         self.click_on_the_element(self.add_player_xpath)
         self.wait_for_element_to_be_clickable(self.add_player_xpath)
         assert self.get_page_title(self.player_title_xpath) == self.add_player_title
 
-    def type_in_email(self):
+    def type_in_email(self, email):
         self.field_send_keys(self.email_field_xpath, email)
 
     def type_in_name(self, name):
@@ -65,4 +61,4 @@ class AddAPlayer(BasePage):
 
     def required_message(self):
         self.visibility_of_element_located(self.required_message_xpath)
-        assert(self.driver, self.required_message_xpath, "Required")
+        assert (self.driver, self.required_message_xpath, "Required")

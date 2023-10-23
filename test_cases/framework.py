@@ -1,4 +1,3 @@
-import os
 import unittest
 
 from selenium import webdriver
@@ -7,6 +6,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.chrome.service import Service as ChromeService
 
 IMPLICITLY_WAIT = 10
+
 
 class TestMediumPage(unittest.TestCase):
     def setUp(self):
@@ -26,4 +26,3 @@ class TestMediumPage(unittest.TestCase):
 
     def tearDown(self):
         self.driver.quit()
-

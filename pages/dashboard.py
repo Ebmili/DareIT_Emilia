@@ -1,6 +1,5 @@
 from lib2to3.pgen2 import driver
 from selenium.webdriver.support.wait import WebDriverWait
-from selenium import webdriver
 from pages.base_page import BasePage
 import time
 

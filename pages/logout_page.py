@@ -1,6 +1,7 @@
 import time
 from pages.base_page import BasePage
 
+
 class LogoutPage(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"
@@ -43,4 +44,3 @@ class LogoutPage(BasePage):
 
     def click_sign_out_button(self):
         self.click_on_the_element(self.sign_out_button_xpath)
-

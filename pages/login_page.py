@@ -1,4 +1,6 @@
 from pages.base_page import BasePage
+
+
 class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
     password_field_xpath = "//*[@id='password']"

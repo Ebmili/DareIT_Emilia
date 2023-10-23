@@ -7,6 +7,7 @@ from selenium import webdriver
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
+
 class TestLoginPage(unittest.TestCase):
 
     @classmethod
@@ -35,4 +36,3 @@ class TestLoginPage(unittest.TestCase):
     @classmethod
     def tearDownClass(cls):
         driver.quit()
-

@@ -5,6 +5,8 @@ from pages.login_page import LoginPage
 from selenium import webdriver
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
+
+
 class TestLogoutPage(unittest.TestCase):
 
     @classmethod

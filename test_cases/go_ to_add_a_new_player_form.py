@@ -10,10 +10,11 @@ from pages.login_page import LoginPage
 
 driver = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()))
 
+
 class TestAddPlayer(unittest.TestCase):
 
     @classmethod
-    def setUp(self):
+    def setUp(cls):
         driver.get('https://scouts.futbolkolektyw.pl/en/')
         driver.fullscreen_window()
         driver.get('https://dareit.futbolkolektyw.pl/en/players/add')
@@ -28,7 +29,6 @@ class TestAddPlayer(unittest.TestCase):
         dashboard_page.click_on_the_add_player()
         time.sleep(5)
 
-
     @classmethod
-    def tearDown(self):
+    def tearDown(cls):
         driver.quit()

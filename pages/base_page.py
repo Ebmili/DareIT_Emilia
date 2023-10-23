@@ -1,11 +1,11 @@
-import time
 from selenium.webdriver.common.by import By
 from selenium.webdriver.remote.webdriver import WebDriver
 from selenium.webdriver.support.wait import WebDriverWait
 from util.settings import DEFAULT_LOCATOR_TYPE
 from selenium.webdriver.support import expected_conditions as EC
 
-class BasePage():
+
+class BasePage:
 
     def __init__(self, driver: WebDriver):
         self.driver = driver
