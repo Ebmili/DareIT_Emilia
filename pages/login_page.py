@@ -1,5 +1,9 @@
 from pages.base_page import BasePage
 
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+
 
 class LoginPage(BasePage):
     login_field_xpath = "//*[@id='login']"
@@ -14,8 +18,12 @@ class LoginPage(BasePage):
     expected_header_of_box = 'Scouts Panel'
     english_language_listbox_xpath = "//div[2]/div/div"
     polski_option_xpath = "//div[3]/ul/li[1]"
-    invalid_data_text_xpath = "// div[3] / span"
+    password_invalid_message_xpath = "//*[@id='__next']/form/div/div[1]/div[3]/span"
     expected_invalid_data_text = "Identifier or password invalid."
+
+    # Login URL and expected title for test
+    header_of_box = 'Scouts Panel'
+    expected_invalid_password = "Identifier or password invalid."
 
     def type_in_email(self, email):
         self.field_send_keys(self.login_field_xpath, email)
@@ -46,5 +54,7 @@ class LoginPage(BasePage):
     def click_sign_out_button(self):
         self.click_on_the_element(self.sign_in_button_xpath)
 
-    def invalid_data(self):
-        self.assert_element_text(self.driver, self.invalid_data_text_xpath, self.expected_invalid_data_text)
+    def check_invalid_password_message(self):
+        self.visibility_of_element_located(self.password_invalid_message_xpath, self.expected_invalid_password)
+    def check_invalid_password_message(self):
+        self.visibility_of_element_located(self.password_invalid_message_xpath, self.expected_invalid_password)

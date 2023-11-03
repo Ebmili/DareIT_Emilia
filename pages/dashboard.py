@@ -39,5 +39,4 @@ class Dashboard(BasePage):
         time.sleep(5)
         self.click_on_the_element(self.sign_out_button_xpath)
 
-
 pass
