@@ -33,6 +33,8 @@ class TestLoginPage(unittest.TestCase):
         user_login.check_invalid_password_message()
         time.sleep(5)
 
+        driver.save_screenshot('screenshot.png')
+
     @classmethod
     def tearDownClass(cls):
         driver.quit()
